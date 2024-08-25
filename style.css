@@ -89,18 +89,27 @@ body {
 
 .link {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 21.875rem;
     height: 3.2rem;
     background-color: var(--bg-social);
     border-radius: 0.5rem;
     font-weight: var(--fw-600);
     color: var(--clr-White);
-    text-decoration: none;
 }
 
-.link:hover, a:focus-visible    {
+.link > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    color: var(--clr-White);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.link:hover a, .link:focus-within a {
     background-color: var(--clr-highlight);
     color: var(--clr-Grey-900);
     outline: none;
